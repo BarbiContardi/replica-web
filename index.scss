@@ -1,6 +1,7 @@
 * {
   margin: 0px;
-  & ::before, ::after{
+  & ::before,
+  ::after {
     box-sizing: border-box;
   }
 }
@@ -9,7 +10,7 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.4;
   font-size: 16px;
 }
@@ -22,25 +23,25 @@ body {
 }
 
 .navbar-sup {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 52px;
-    border-bottom: 1px solid #dadada;
-    background-color: #ffffff;
-    position: relative;
-    z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  border-bottom: 1px solid #dadada;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 100;
 
   .left:first-child {
-      flex: 1 1 0%;
+    flex: 1 1 0%;
   }
- .left {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
     .logo {
-      width: 105px;;
+      width: 105px;
       height: 51px;
     }
 
@@ -54,7 +55,11 @@ body {
       .button-search {
         background: none;
         border: none;
-        img {
+        span{
+          color:#484848;
+          font-size: 14px;
+        }
+        svg {
           filter: invert(24%) sepia(0%) saturate(1999%) hue-rotate(252deg)
             brightness(106%) contrast(88%);
         }
@@ -101,15 +106,41 @@ body {
   display: flex;
   align-items: center;
   border: none;
-  background-color:#ffffff;
+  background-color: #ffffff;
   padding: 1rem;
   align-self: center;
   color: #484848;
   font-size: 0.875rem;
   font-weight: 700;
   gap: 0.5rem;
-  & :hover {
+
+  &:hover {
     color: red;
+
+    transition: 0.3s ease-in-out;
+
+    .icon {
+      filter: none;
+
+      svg {
+        path {
+          fill: red;
+
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+    .icon2 {
+      filter: none;
+
+      svg {
+        path {
+          fill: red;
+
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
   }
 }
 
@@ -118,7 +149,7 @@ body {
   flex-direction: row;
   height: 44px;
   justify-content: center;
-  align-items: center;         
+  align-items: center;
 }
 
 .icon {
@@ -131,5 +162,5 @@ body {
   width: 12px;
   height: 12px;
   filter: invert(24%) sepia(0%) saturate(1999%) hue-rotate(252deg)
-brightness(106%) contrast(88%);
-}  
+    brightness(106%) contrast(88%);
+}

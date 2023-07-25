@@ -1,7 +1,8 @@
 * {
   margin: 0px;
 }
-* ::before, * ::after {
+* ::before,
+* ::after {
   box-sizing: border-box;
 }
 
@@ -56,7 +57,11 @@ body {
   background: none;
   border: none;
 }
-.navbar-sup .left .search .button-search img {
+.navbar-sup .left .search .button-search span {
+  color: #484848;
+  font-size: 14px;
+}
+.navbar-sup .left .search .button-search svg {
   filter: invert(24%) sepia(0%) saturate(1999%) hue-rotate(252deg) brightness(106%) contrast(88%);
 }
 .navbar-sup .left .search input {
@@ -104,8 +109,23 @@ body {
   font-weight: 700;
   gap: 0.5rem;
 }
-.btn-navbar :hover {
+.btn-navbar:hover {
   color: red;
+  transition: 0.3s ease-in-out;
+}
+.btn-navbar:hover .icon {
+  filter: none;
+}
+.btn-navbar:hover .icon svg path {
+  fill: red;
+  transition: 0.3s ease-in-out;
+}
+.btn-navbar:hover .icon2 {
+  filter: none;
+}
+.btn-navbar:hover .icon2 svg path {
+  fill: red;
+  transition: 0.3s ease-in-out;
 }
 
 .navbar-inf {
